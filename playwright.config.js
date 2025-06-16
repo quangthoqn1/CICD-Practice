@@ -10,7 +10,10 @@ module.exports = defineConfig({
     viewport: null,
     launchOptions: {
       args: ['--start-maximized'],
-    }
+    },
   },
-  reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
+  reporter: [
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['allure-playwright'],
+  ],
 });
