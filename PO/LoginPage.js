@@ -1,4 +1,6 @@
 // pages/LoginPage.js
+const { expect } = require('@playwright/test');
+
 class LoginPage {
   /**
    * @param {import('@playwright/test').Page} page
@@ -12,8 +14,12 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-  }
+  await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', {
+    timeout: 60000, // hoặc cao hơn nếu mạng chậm
+    waitUntil: 'load'
+  });
+}
+
 
   async login(username, password) {
     await this.usernameInput.fill(username);
@@ -22,13 +28,12 @@ class LoginPage {
   }
 
   async assertSuccessMessage() {
-    await expect(this.flashMessage).toBeVisible;
+    await expect(this.flashMessage).toBeVisible(); // cần thêm ()
   }
 
   async assertUrlAfterLogin() {
     await expect(this.page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
   }
-  
 }
-const { expect } = require('@playwright/test');
+
 module.exports = { LoginPage };
