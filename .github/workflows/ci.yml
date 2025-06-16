@@ -1,9 +1,12 @@
 name: Run Tests and Generate Allure Report
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to test'
+        required: true
+        default: 'staging'
 
 jobs:
   test:
