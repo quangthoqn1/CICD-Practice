@@ -25,7 +25,8 @@ jobs:
         run: npm install
 
       - name: Print Environment
-        run: echo "Testing environment: ${{ github.event.inputs.environment }}"
+        run: |
+          echo "Testing environment: ${{ github.event.inputs.environment }}"
 
 
       - name: Install Playwright Browsers
@@ -47,5 +48,3 @@ jobs:
         with:
           name: allure-report
           path: ./allure-report
-
-
