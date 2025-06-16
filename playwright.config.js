@@ -4,16 +4,14 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
   timeout: 30000,
   retries: 0,
-  testDir: './tests',
   use: {
     headless: true,
-    viewport: null,
-    launchOptions: {
-      args: ['--start-maximized'],
-    },
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    trace: 'retain-on-failure'
   },
   reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['allure-playwright'],
-  ],
+    ['list'],
+    ['allure-playwright']
+  ]
 });

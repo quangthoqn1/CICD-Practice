@@ -24,11 +24,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Print Environment
+        run: echo "Testing environment: ${{ github.event.inputs.environment }}"
+
       - name: Run Playwright Tests
         run: npm run test
 
       - name: Install Allure Commandline
-        run: npm install -g allure-commandline --no-save
+        run: |
+          npm install -g allure-commandline --no-save
+          echo "$(npm bin -g)" >> $GITHUB_PATH
 
       - name: Generate Allure Report
         run: npm run allure:generate

@@ -10,7 +10,7 @@ class LoginPage {
     this.usernameInput = page.locator('//input[@name = "username"]');
     this.passwordInput = page.locator('//input[@name = "password"]');
     this.loginButton = page.locator('button[type="submit"]');
-    this.flashMessage = page.locator('//img[@alt = "client brand banner"]');
+    // this.flashMessage = page.locator('//img[@alt = "client brand banner"]');
   }
 
   async goto() {
