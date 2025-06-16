@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","30251","Login successfully using Page Object Model","","Mon Jun 16 13:59:56 ICT 2025","broken","Mon Jun 16 14:00:26 ICT 2025","","Login.spec.js","",""
+"","30042","Login successfully using Page Object Model","","Mon Jun 16 14:14:31 ICT 2025","broken","Mon Jun 16 14:15:01 ICT 2025","","Login.spec.js","",""
