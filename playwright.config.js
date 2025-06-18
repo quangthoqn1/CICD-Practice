@@ -7,6 +7,6 @@ export default defineConfig({
     ['allure-playwright'],
   ],
   use: {
-    headless: false
+    headless: true
   }
 });
