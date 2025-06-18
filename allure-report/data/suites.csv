@@ -1,3 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","30729","Login successfully using Page Object Model","","Mon Jun 16 16:35:21 ICT 2025","passed","Mon Jun 16 16:35:52 ICT 2025","","tests\Login.spec.js","",""
+"","20817","Login successfully using Page Object Model","","Mon Jun 16 17:09:54 ICT 2025","passed","Mon Jun 16 17:10:15 ICT 2025","","tests\Login.spec.js","",""
+"","14209","Search Admin at Admin Page","","Wed Jun 18 09:38:57 ICT 2025","passed","Wed Jun 18 09:39:11 ICT 2025","","tests\Admin\SearchAdmin.spec.js","",""
+"","16847","Login successfully using Page Object Model","","Wed Jun 18 09:38:39 ICT 2025","passed","Wed Jun 18 09:38:56 ICT 2025","","tests\Admin\SearchAdmin.spec.js","",""
 "","16111","Login successfully using Page Object Model","","Mon Jun 16 16:11:34 ICT 2025","passed","Mon Jun 16 16:11:50 ICT 2025","","Login.spec.js","",""

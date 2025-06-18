@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../PO/LoginPage';
+import { LoginPage } from '../../PO/LoginPage';
 
 test('Login successfully using Page Object Model', async ({ page }) => {
   test.setTimeout(60000); 
