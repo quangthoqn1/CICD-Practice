@@ -52,10 +52,10 @@ jobs:
       - name: Upload Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./allure-report
-        publish_branch: gh-pages
-        enable_jekyll: false  # rất quan trọng!
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          publish_branch: gh-pages
+          enable_jekyll: false  # rất quan trọng!
 
 
       - name: List Allure Report files
