@@ -10,7 +10,7 @@ on:
       testPath:
         description: 'Path to test file or folder (e.g., tests/login.spec.ts or tests/api)'
         required: true
-        default: 'tests/login.spec.ts'
+        default: 'tests/Login/Login.spec.js'
 
 jobs:
   test:
