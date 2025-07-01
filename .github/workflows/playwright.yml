@@ -7,6 +7,10 @@ on:
         description: 'Environment to test'
         required: true
         default: 'staging'
+      testPath:
+        description: 'Path to test file or folder (e.g., tests/login.spec.ts or tests/api)'
+        required: true
+        default: 'tests/login.spec.ts'
 
 jobs:
   test:
@@ -27,13 +31,13 @@ jobs:
       - name: Print Environment
         run: |
           echo "Testing environment: ${{ github.event.inputs.environment }}"
-
+          echo "Test path: ${{ github.event.inputs.testPath }}"
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright Tests
-        run: npm run test
+      - name: Run Playwright Tests (by path)
+        run: npx playwright test ${{ github.event.inputs.testPath }}
 
       - name: Install Allure Commandline
         run: |
@@ -55,10 +59,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
           publish_branch: gh-pages
-          enable_jekyll: false  # rất quan trọng!
-
+          enable_jekyll: false
 
       - name: List Allure Report files
         run: ls -R ./allure-report
-
-
